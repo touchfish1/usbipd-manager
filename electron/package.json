@@ -1,0 +1,30 @@
+{
+  "name": "usbipd-manager-electron",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "USBIPD 管理器桌面版",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.yourcompany.usbipd",
+    "productName": "USBIPD Manager",
+    "files": [
+      "../frontend/dist/**/*",
+      "main.js"
+    ],
+    "extraResources": [
+      { "from": "../backend/usbipd-backend.exe", "to": "usbipd-backend.exe" },
+      { "from": "../frontend/dist", "to": "app/frontend/dist" }
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
