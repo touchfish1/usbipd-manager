@@ -1,0 +1,33 @@
+# Node
+node_modules/
+
+# Vite/React
+frontend/dist/
+
+# Electron
+.DS_Store
+electron/dist/
+electron/out/
+electron/*.log
+
+# Go build
+backend/*.exe
+backend/*.out
+backend/operation_logs.db
+
+# OS
+Thumbs.db
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Log
+*.log
+
+# Others
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log* 
